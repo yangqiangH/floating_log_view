@@ -1,6 +1,8 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.github.dcendents.android-maven'
 
 group='com.github.yangqiangH'
@@ -26,6 +28,14 @@ android {
         }
     }
 
+    dataBinding {
+        enabled = true
+    }
+
+    kapt {
+        generateStubs = true
+    }
+
 }
 
 dependencies {
@@ -36,4 +46,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.imuxuan:floatingview:1.5'
 }

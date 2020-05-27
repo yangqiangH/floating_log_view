@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="spinner_log_levels">
+        <item>Verbose</item>
+        <item>Debug</item>
+        <item>Info</item>
+        <item>Warm</item>
+        <item>Error</item>
+        <item>Assert</item>
+    </string-array>
+
+
+    <string-array name="spinner_filter">
+        <item>Clear</item>
+        <item>Report</item>
+    </string-array>
+</resources>

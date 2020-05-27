@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/floating_logview_bg"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/open"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:text="日志\n浮窗"
+                android:textColor="#ffffff"
+                android:textSize="11dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tool_content"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/tool_line_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:text="LogLevel :"
+                    android:textColor="#ffffff"
+                    android:textSize="12dp"
+                    android:visibility="gone" />
+
+                <Spinner
+                    android:id="@+id/spinner_log_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/spinner_log_levels"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp"
+                    android:text="按住我拖动"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:layout_weight="1" />
+
+                <CheckBox
+                    android:id="@+id/cb_auto_scroll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="4dp"
+                    android:text="自动滚动"
+                    android:textColor="#ffffff"
+                    android:checked="true"
+                    style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/shrink"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/floating_logview_btn_bg"
+                    android:gravity="center"
+                    android:text="最小化"
+                    android:textColor="#00ff00"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/close"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="4dp"
+                    android:gravity="center"
+                    android:background="@drawable/floating_logview_btn_bg"
+                    android:text="关闭"
+                    android:textColor="#00ff00"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tool_line_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:layout_marginTop="4dp"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:text="过滤"
+                    android:textColor="#ffffff"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/et_filter"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:maxLines="1"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:textColor="#333333"
+                    android:background="@drawable/floating_logview_editor_border"
+                    android:textSize="12dp"
+                    android:hint="输入关键字过滤"
+                    android:autofillHints=""
+                    android:inputType="text" />
+
+                <Spinner
+                    android:id="@+id/spinner_filters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:visibility="gone"
+                    android:entries="@array/spinner_filter" />
+
+                <TextView
+                    android:id="@+id/clear"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="4dp"
+                    android:gravity="center"
+                    android:background="@drawable/floating_logview_btn_bg"
+                    android:text="清空日志"
+                    android:textColor="#00ff00"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lv_logs"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:divider="#bbbbbb"
+                android:dividerHeight="0.67dp"
+                android:listSelector="#00000000"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</layout>

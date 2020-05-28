@@ -15,7 +15,6 @@ import java.util.*
 /**
  *
  * @Description:    日志浮窗的管理类
- * @Author:         astonyang AstonYang
  * @CreateDate:     2020/5/13 3:11 PM
  * @Version:        1.0
  */

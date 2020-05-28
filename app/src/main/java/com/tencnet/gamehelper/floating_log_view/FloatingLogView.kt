@@ -23,7 +23,6 @@ import java.util.*
 /**
  *
  * @Description:    Window顶层显示的日志浮窗
- * @Author:         astonyang AstonYang
  * @CreateDate:     2020/5/13 3:32 PM
  * @Version:        1.0
  */
